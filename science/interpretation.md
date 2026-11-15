@@ -22,7 +22,7 @@ $$
 has worst-case proper-learning source cost
 
 $$
-N_{\min}(M)=\Theta_{a,\epsilon,H,\delta}\!\left(M^{1-1/k}\right).
+N_{\min}(M)=\Theta_{a,\epsilon,H,\delta}\left(M^{1-1/k}\right).
 $$
 
 Here the input distribution is uniform on a known $`M`$-point support, the conditional-state table is unknown and fixed, the finite class size $`H\geq2`$ and failure probability $`0\lt \delta\lt 1/2`$ are fixed, and $`M`$ grows. The upper bound holds for each fixed finite class. The lower bound is witnessed by a particular two-hypothesis class on a four-dimensional output space; it is not a lower bound for every class.

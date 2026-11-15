@@ -18,7 +18,7 @@ For every fixed integer $`k\ge1`$, at accuracies strictly between adjacent thres
 \Gamma_k(a)<\varepsilon<\Gamma_{k-1}(a)
 \quad\Longrightarrow\quad
 N_{\mathrm{worst}}(M)
-=\Theta_{a,\varepsilon,H,\delta}\!\left(M^{1-1/k}\right).
+=\Theta_{a,\varepsilon,H,\delta}\left(M^{1-1/k}\right).
 ```
 
 Here $`H\ge2`$ is a fixed finite cap on the number of hypotheses, the failure target satisfies $`0\lt \delta\lt 1/2`$, and $`M`$ tends to infinity while the other parameters remain fixed. The upper bound holds for every such class; a particular two-hypothesis class on two-qubit outputs witnesses the worst-case lower bound. Arbitrary collective quantum measurements are allowed.

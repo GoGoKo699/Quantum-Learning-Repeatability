@@ -9,8 +9,8 @@ Let $`\mathcal P([0,1])`$ denote the probability measures on $`[0,1]`$, put $`f_
 $$
 \kappa_r(a)=
 \max_{\substack{\mu,\nu\in\mathcal P([0,1])\\
-\int u^j\,d\mu=\int u^j\,d\nu\ (0\leq j\leq r)}}
-\frac{\int f_a\,d\mu}{\int f_a\,d\nu},
+\int u^j\thinspace d\mu=\int u^j\thinspace d\nu\ (0\leq j\leq r)}}
+\frac{\int f_a\thinspace d\mu}{\int f_a\thinspace d\nu},
 \qquad
 \Gamma_r(a)=\frac{\log\kappa_r(a)}a.
 $$
@@ -20,10 +20,10 @@ The order-zero condition records equal mass. Both measures already have mass one
 $$
 \Gamma_r(a)=
 \max_{\mu,\nu\text{ matching through }r}
-\left|
-\frac1a\log\int f_a\,d\mu-
-\frac1a\log\int f_a\,d\nu
-\right|.
+\left\lvert
+\frac1a\log\int f_a\thinspace d\mu-
+\frac1a\log\int f_a\thinspace d\nu
+\right\rvert.
 $$
 
 The maximum exists. The space of probability measures on the compact interval is weakly compact; the moment constraints are closed; the exponential integrals are continuous; and the denominator is at least one. In particular, $`1\leq\kappa_r(a)\leq e^a`$.
@@ -31,7 +31,7 @@ The maximum exists. The space of probability measures on the compact interval is
 The measures can be chosen with finite support. Indeed, the vector
 
 $$
-\left(\int u\,d\mu,\ldots,\int u^r\,d\mu,\int f_a\,d\mu\right)
+\left(\int u\thinspace d\mu,\ldots,\int u^r\thinspace d\mu,\int f_a\thinspace d\mu\right)
 $$
 
 lies in the convex hull of the curve $`(u,\ldots,u^r,f_a(u))\in\mathbb R^{r+1}`$. Carathéodory's theorem replaces it by a measure on at most $`r+2`$ points. Applying this separately to an optimal pair preserves its moments and exponential integrals.
@@ -58,10 +58,10 @@ $$
 **Proof.** First suppose $`f_a\leq p\leq Kf_a`$ and $`\mu,\nu`$ match moments through $`r`$. Then
 
 $$
-\int f_a\,d\mu
-\leq\int p\,d\mu
-=\int p\,d\nu
-\leq K\int f_a\,d\nu.
+\int f_a\thinspace d\mu
+\leq\int p\thinspace d\mu
+=\int p\thinspace d\nu
+\leq K\int f_a\thinspace d\nu.
 $$
 
 Thus every feasible envelope bounds the moment ratio from above.
@@ -107,7 +107,7 @@ Define the best relative approximation error
 
 $$
 E_r(a)=\min_{\deg q\leq r}\max_{0\leq u\leq1}
-\left|q(u)e^{-au}-1\right|.
+\left\lvertq(u)e^{-au}-1\right\rvert.
 $$
 
 The minimum exists by the same coefficient-compactness argument as above, and $`E_r(a)\lt 1`$: a suitable positive constant already gives error $`\tanh(a/2)\lt 1`$. Scaling an envelope to balance its upper and lower relative errors, and conversely scaling a relative approximant upward, gives
@@ -171,10 +171,10 @@ The alternation theorem used here is the usual best-approximation theorem for a 
 **Proposition 3 — the first frontier value.** Let $`b=e^a-1`$ and
 
 $$
-m_{*}(a)=\frac1a-\frac1b.
+m_{\ast }(a)=\frac1a-\frac1b.
 $$
 
-Then $`m_{*}\in(0,1)`$ and
+Then $`m_{\ast }\in(0,1)`$ and
 
 $$
 \kappa_1(a)=\frac ba\exp\left(-1+\frac ab\right),
@@ -185,7 +185,7 @@ $$
 **Proof.** Among probability measures with mean $`m`$, convexity gives
 
 $$
-e^{am}\leq\int e^{au}\,d\mu(u)\leq1+m(e^a-1).
+e^{am}\leq\int e^{au}\thinspace d\mu(u)\leq1+m(e^a-1).
 $$
 
 The lower endpoint is attained by $`\delta_m`$, and the upper by $`(1-m)\delta_0+m\delta_1`$. Hence
@@ -194,14 +194,14 @@ $$
 \kappa_1(a)=\max_{0\leq m\leq1}(1+bm)e^{-am}.
 $$
 
-The derivative of its logarithm is $`b/(1+bm)-a`$. It is positive at zero and negative at one, and is strictly decreasing. The unique maximizer is $`m_{*}`$; substitution gives the displayed formula. $`\square`$
+The derivative of its logarithm is $`b/(1+bm)-a`$. It is positive at zero and negative at one, and is strictly decreasing. The unique maximizer is $`m_{\ast }`$; substitution gives the displayed formula. $`\square`$
 
 Writing $`S(h)=(h-1)h^{1/(h-1)}/(e\log h)`$, this is $`\Gamma_1(a)=a^{-1}\log S(e^a)`$. The function $`S`$ is the classical [Specht ratio](https://www.kurims.kyoto-u.ac.jp/~kyodo/kokyuroku/contents/pdf/1259-1.pdf), a sharp reverse arithmetic-geometric mean constant. The constant is inherited; its operational interpretation is supplied below.
 
 **Proposition 4 — fixed-degree small-tilt asymptotics.** For each fixed integer $`r\geq1`$,
 
 $$
-\Gamma_r(a)\sim\frac{a^r}{(r+1)!\,4^r}\qquad(a\downarrow0).
+\Gamma_r(a)\sim\frac{a^r}{(r+1)!\thinspace 4^r}\qquad(a\downarrow0).
 $$
 
 **Proof.** Let $`P_r(u)=\sum_{j=0}^{r}(au)^j/j!`$. Uniformly on $`[0,1]`$,
@@ -216,7 +216,7 @@ Subtracting $`P_r`$ does not change distance from the degree-$`r`$ polynomial sp
 $$
 \frac{E_r(a)}{a^{r+1}}
 \longrightarrow
-\frac1{(r+1)!}\inf_{\deg q\leq r}\|u^{r+1}-q(u)\|_\infty.
+\frac1{(r+1)!}\inf_{\deg q\leq r}\Vert u^{r+1}-q(u)\Vert _\infty.
 $$
 
 The last infimum is $`2^{-(2r+1)}`$. Indeed, the monic shifted Chebyshev polynomial $`2^{-(2r+1)}\mathrm T_{r+1}(2u-1)`$ has exactly that norm. A monic polynomial with smaller norm would differ from it by a degree-$`r`$ polynomial with at least $`r+1`$ sign changes between its alternating extreme points, a contradiction. Finally,
@@ -243,18 +243,18 @@ $$
 A_h\leq P_h\leq\kappa_r(a)A_h.
 $$
 
-If all $`P_h`$ are estimated to additive error at most $`\eta`$ and the learner minimizes those estimates, then for a true risk minimizer $`h^{*}`$,
+If all $`P_h`$ are estimated to additive error at most $`\eta`$ and the learner minimizes those estimates, then for a true risk minimizer $`h^{\ast }`$,
 
 $$
 A_{\widehat h}\leq P_{\widehat h}
-\leq P_{h^{*}}+2\eta
-\leq\kappa_r(a)A_{h^{*}}+2\eta.
+\leq P_{h^{\ast }}+2\eta
+\leq\kappa_r(a)A_{h^{\ast }}+2\eta.
 $$
 
-Since $`A_{h^{*}}\geq1`$,
+Since $`A_{h^{\ast }}\geq1`$,
 
 $$
-R_a(\widehat h)-R_a(h^{*})
+R_a(\widehat h)-R_a(h^{\ast })
 \leq\Gamma_r(a)+\frac1a\log\left(1+\frac{2\eta}{\kappa_r(a)}\right)
 \leq\Gamma_r(a)+\frac{2\eta}{a\kappa_r(a)}.
 $$
@@ -268,15 +268,16 @@ Thus every tolerance strictly above $`\Gamma_r(a)`$ admits a support-independent
 Choose an optimal pair $`\mu_-,\mu_+`$ matching moments through $`r`$, oriented so that
 
 $$
-\frac1a\log\int f_a\,d\mu_+
--\frac1a\log\int f_a\,d\mu_-
+\frac1a\log\int f_a\thinspace d\mu_+
+-\frac1a\log\int f_a\thinspace d\mu_-
 =\Gamma_r(a).
 $$
 
 To witness the worst case under the class-size cap $`H`$, use exactly $`H`$ hypotheses. For each world $`j\in[H]`$ and each context $`x`$, independently draw latent probabilities $`U_{x,j}\sim\mu_-`$ and $`U_{x,h}\sim\mu_+`$ for $`h\ne j`$. Freeze these draws, and define
 
 $$
-\tau_u=\begin{pmatrix}1-u&0\\0&u\end{pmatrix},
+\tau_u=\begin{pmatrix}1-u&0\\
+0&u\end{pmatrix},
 \qquad
 \rho_x=\bigotimes_{h=1}^{H}\tau_{U_{x,h}}.
 $$
@@ -286,8 +287,8 @@ Hypothesis $`h`$ uses the projector $`|0\rangle\langle0|`$ on coordinate $`h`$, 
 For any $`s\leq r`$, each entry of $`\tau_u^{\otimes s}`$ is a polynomial in $`u`$ of degree at most $`s`$. Therefore
 
 $$
-\int\tau_u^{\otimes s}\,d\mu_-(u)
-=\int\tau_u^{\otimes s}\,d\mu_+(u).
+\int\tau_u^{\otimes s}\thinspace d\mu_-(u)
+=\int\tau_u^{\otimes s}\thinspace d\mu_+(u).
 $$
 
 Regrouping tensor factors by hypothesis coordinate proves that the averaged $`s`$-copy state at a context is identical in every world. Conditional on a sequence of distinct grouped-example labels, the complete averaged training state is consequently identical across worlds, even when the learner is allowed a collective measurement on all groups. With $`G`$ groups, the probability of a repeated group label is at most $`G(G-1)/(2M)`$.
@@ -312,7 +313,7 @@ The following elementary decision lemma identifies the metric distinction.
 **Proof.** By the finite-action compact-game minimax theorem, it suffices to bound the Bayes regret under every distribution of admissible risk vectors. Choose a measurable minimizing action $`J`$ for each vector, breaking ties deterministically, and let $`p_h=\Pr(J=h)`$. Pointwise,
 
 $$
-R_h-R_J\leq l_h-l_J+W\,\mathbf1\{h\ne J\}.
+R_h-R_J\leq l_h-l_J+W\thinspace \mathbf1\lbrace h\ne J\rbrace .
 $$
 
 Averaging its expectation over a fixed random action with probabilities $`p_h`$ cancels the $`l`$ terms, giving

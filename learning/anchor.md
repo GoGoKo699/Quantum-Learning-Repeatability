@@ -25,9 +25,9 @@ Watrous uses matrix notation rather than Dirac notation. The project uses both.
 | --- | --- |
 | A complex Euclidean space such as $`\mathcal X`$ | A finite-dimensional register space, here $`\mathsf Q\cong\mathbb C^d`$ |
 | $`\mathrm D(\mathcal X)`$ | The density operators, written $`\mathcal D(\mathsf Q)`$ here |
-| $`u u^{*}`$ and $`E_{x,x}=e_xe_x^{*}`$ | $`\lvert u\rangle\langle u\rvert`$ and $`\lvert x\rangle\langle x\rvert`$ |
+| $`u u^{\ast }`$ and $`E_{x,x}=e_xe_x^{\ast }`$ | $`\lvert u\rangle\langle u\rvert`$ and $`\lvert x\rangle\langle x\rvert`$ |
 | A measurement $`\mu`$ with outcome operator $`\mu(1)`$ | The loss outcome operator $`I-\Pi_h(x)`$ |
-| $`\langle A,\rho\rangle=\mathrm{Tr}(A^{*}\rho)`$ | $`\mathrm{Tr}[(I-\Pi_h(x))\rho_x]=\ell_h(x)`$ for the Hermitian loss projector |
+| $`\langle A,\rho\rangle=\mathrm{Tr}(A^{\ast }\rho)`$ | $`\mathrm{Tr}[(I-\Pi_h(x))\rho_x]=\ell_h(x)`$ for the Hermitian loss projector |
 | $`\lVert A\rVert_1`$ | The same trace norm; our trace distance is $`D(\rho,\sigma)=\tfrac12\lVert\rho-\sigma\rVert_1`$ |
 
 ## From registers to the source

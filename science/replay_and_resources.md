@@ -64,8 +64,8 @@ The identity is the classical Poisson probability-generating-function/exponentia
 Under the natural-source interface, the first specimen is prepared even when $`K=0`$. The physical number prepared for an untruncated event is therefore
 
 $$
-\max\{1,K\},\qquad
-\mathbb E\max\{1,K\}=a+e^{-a}\le 1+a.
+\max\lbrace 1,K\rbrace ,\qquad
+\mathbb E\max\lbrace 1,K\rbrace =a+e^{-a}\le 1+a.
 $$
 
 When $`K=0`$ this initial specimen is unused. An expected cost of exactly $`a`$ is valid only under an explicitly stronger interface that can reveal the context while preparing no quantum output on zero-copy events. That interface is not assumed here.
@@ -86,14 +86,14 @@ Every event prepares at most $`r`$ specimens. Its expected count is at most $`a+
 Suppose estimates of $`\beta_h^{(r)}`$ have uniform additive error at most $`\eta`$. Selecting a minimizer then gives
 
 $$
-\beta_{\widehat h}\le\beta_{h_{*}}+2\eta+t_r,
+\beta_{\widehat h}\le\beta_{h_{\ast }}+2\eta+t_r,
 $$
 
 and hence
 
 $$
-R_a(\widehat h)-R_a(h_{*})
-\le\frac1a\log\!\left(1+e^a(2\eta+t_r)\right).
+R_a(\widehat h)-R_a(h_{\ast })
+\le\frac1a\log\left(1+e^a(2\eta+t_r)\right).
 $$
 
 For instance it suffices to choose $`2\eta+t_r\le e^{-a}(e^{a\varepsilon}-1)`$. Independent estimation per hypothesis uses
@@ -124,7 +124,7 @@ The following accounting describes the constructions, rather than an optimized u
 For the memoryless-measurement upper bound, each batch can maintain a dictionary indexed by observed contexts, with counts capped at $`k`$ and the first $`k`$ binary outcomes. There are at most $`b_M`$ entries. A conservative peak classical-memory charge is
 
 $$
-O\!\left(b_M(\log M+k+\log(k+1))\right)\text{ bits}.
+O\left(b_M(\log M+k+\log(k+1))\right)\text{ bits}.
 $$
 
 Hypotheses and batches can be processed sequentially, reusing this cache. Uniform selection among eligible contexts can use reservoir sampling when a context first reaches count $`k`$. This selection is independent of all quantum measurement outcomes. Hash-table processing has expected linear word-operation cost per batch; bit operations, reading context labels, and implementing $`\Pi_h(x)`$ have their usual additional costs.

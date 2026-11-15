@@ -6,7 +6,7 @@ The objective is a nonlinear function of a conditional Born probability. This di
 
 ## 1. Source and hypotheses
 
-Let $`M\geq 1`$, let $`\mathsf Q\cong\mathbb C^d`$ be a finite-dimensional quantum register, and write $`[M]=\{1,\ldots,M\}`$. An unknown source is a fixed table
+Let $`M\geq 1`$, let $`\mathsf Q\cong\mathbb C^d`$ be a finite-dimensional quantum register, and write $`[M]=\lbrace 1,\ldots,M\rbrace `$. An unknown source is a fixed table
 
 $$
 \rho:[M]\longrightarrow\mathcal D(\mathsf Q),\qquad x\longmapsto\rho_x.
@@ -29,13 +29,13 @@ The table is fixed throughout the experiment. If a label reappears, the source s
 The learner knows $`M`$ and a finite hypothesis class
 
 $$
-\mathcal H=\{h_1,\ldots,h_m\},\qquad 1\leq m\leq H,\quad H\geq2.
+\mathcal H=\lbrace h_1,\ldots,h_m\rbrace ,\qquad 1\leq m\leq H,\quad H\geq2.
 $$
 
 Here $`H`$ is the fixed class-size cap; $`m`$ is the size of the supplied class. Each hypothesis specifies known projectors $`\Pi_h(x)`$ on $`\mathsf Q`$. Its conditional loss is
 
 $$
-\ell_h(x)=1-\mathrm{Tr}\!\left(\Pi_h(x)\rho_x\right)\in[0,1].
+\ell_h(x)=1-\mathrm{Tr}\left(\Pi_h(x)\rho_x\right)\in[0,1].
 $$
 
 This is agnostic learning: the unknown table need not belong to the hypothesis class. The lower bounds use constant projectors on a fixed number of qubits, so they do not rely on difficult hypothesis evaluation or a growing quantum output dimension.
@@ -50,7 +50,7 @@ $$
 
 The task is to minimize this quantity over $`h\in\mathcal H`$. It lies in $`[0,1]`$. As $`a\to0`$, it tends to the mean loss $`M^{-1}\sum_x\ell_h(x)`$; a positive tilt gives more weight to contexts with larger conditional loss.
 
-Let $`Y_h\in\{0,1\}`$ be the loss outcome obtained by measuring $`\{\Pi_h(x),I-\Pi_h(x)\}`$ on one copy at context $`x`$, with $`Y_h=1`$ for the second outcome. Then
+Let $`Y_h\in\lbrace 0,1\rbrace `$ be the loss outcome obtained by measuring $`\lbrace \Pi_h(x),I-\Pi_h(x)\rbrace `$ on one copy at context $`x`$, with $`Y_h=1`$ for the second outcome. Then
 
 $$
 \mathbb E[Y_h\mid X=x]=\ell_h(x).
@@ -87,17 +87,17 @@ $$
 An $`(\epsilon,\delta)`$ guarantee means
 
 $$
-\Pr\!\left[\mathcal E_a(\widehat h;\rho)\leq\epsilon\right]\geq1-\delta
+\Pr\left[\mathcal E_a(\widehat h;\rho)\leq\epsilon\right]\geq1-\delta
 $$
 
 for every fixed source table $`\rho`$. Probability is over the sampled labels, measurement outcomes, and learner randomness.
 
-For a specified class and dimension, let $`N^{*}(M,\mathcal H,d;a,\epsilon,\delta)`$ be the least number of passive examples permitting this guarantee. The worst-case finite-class copy complexity is
+For a specified class and dimension, let $`N^{\ast }(M,\mathcal H,d;a,\epsilon,\delta)`$ be the least number of passive examples permitting this guarantee. The worst-case finite-class copy complexity is
 
 $$
-\mathsf N^{*}(M;a,H,\epsilon,\delta)
-=\sup_{d,\,\mathcal H:\,1\leq|\mathcal H|\leq H}
-N^{*}(M,\mathcal H,d;a,\epsilon,\delta).
+\mathsf N^{\ast }(M;a,H,\epsilon,\delta)
+=\sup_{d,\thinspace \mathcal H:\thinspace 1\leq|\mathcal H|\leq H}
+N^{\ast }(M,\mathcal H,d;a,\epsilon,\delta).
 $$
 
 The algorithm may depend on the known class, $`M`$, and the displayed parameters. In support-size asymptotics, $`a,H,\epsilon,\delta`$ are fixed and $`M\to\infty`$. Constants may depend on those fixed parameters. The sharp exponent statements concern $`0\lt \delta\lt 1/2`$ and errors strictly between successive moment-frontier values; they do not assert endpoint behavior or uniform constants when the tilt, accuracy, or class size also vary.
@@ -109,7 +109,7 @@ A support-independent guarantee uses a number of examples bounded independently 
 The PAC condition above bounds the excess of the hypothesis actually returned. A different criterion is expected regret,
 
 $$
-\mathbb E\!\left[\mathcal E_a(\widehat h;\rho)\right].
+\mathbb E\left[\mathcal E_a(\widehat h;\rho)\right].
 $$
 
 Randomizing between hypotheses can reduce expected regret while leaving a substantial probability of returning a hypothesis with large excess. Consequently, for a class of size $`m`$ the sharp interval-based expected-regret factor is $`1-1/m`$; its worst case under the cap is $`1-1/H`$. The PAC tolerance floor has no such factor. These statements must not be substituted for one another.
@@ -145,14 +145,14 @@ $$
 Then
 
 $$
-R_a(h;\rho)=\frac1a\log\int_0^1e^{au}\,d\mu_h^\rho(u).
+R_a(h;\rho)=\frac1a\log\int_0^1e^{au}\thinspace d\mu_h^\rho(u).
 $$
 
 With $`r`$ copies at one context, measuring the same hypothesis on those copies gives IID conditional Bernoulli losses. For $`j\leq r`$,
 
 $$
-\mathbb E\!\left[\prod_{i=1}^{j}Y_{h,i}\right]
-=\int_0^1u^j\,d\mu_h^\rho(u).
+\mathbb E\left[\prod_{i=1}^{j}Y_{h,i}\right]
+=\int_0^1u^j\thinspace d\mu_h^\rho(u).
 $$
 
 This provides an upper-bound method using the first $`r`$ loss moments. The algebraic fact that an $`r`$-copy observable has an expectation polynomial of degree at most $`r`$ in the state, and that polynomial state functionals can be represented on multiple copies, is established background; see [Brun (2004)](https://arxiv.org/abs/quant-ph/0401067).

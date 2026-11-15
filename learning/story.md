@@ -73,7 +73,7 @@ Repeated preparations reveal higher moments. Passive data can supply such repeti
 Let $`\mu`$ and $`\nu`$ be probability distributions of a loss value $`u\in[0,1]`$. Matching their first $`r`$ moments means
 
 $$
-\int u^j\,d\mu(u)=\int u^j\,d\nu(u)
+\int u^j\thinspace d\mu(u)=\int u^j\thinspace d\nu(u)
 \quad(0\le j\le r).
 $$
 
@@ -82,8 +82,8 @@ Define
 $$
 \kappa_r(a)=
 \max_{\mu,\nu\ \mathrm{matching\ through}\ r}
-\frac{\int e^{au}\,d\mu(u)}
-{\int e^{au}\,d\nu(u)},\qquad
+\frac{\int e^{au}\thinspace d\mu(u)}
+{\int e^{au}\thinspace d\nu(u)},\qquad
 \Gamma_r(a)=\frac1a\log\kappa_r(a).
 $$
 
@@ -126,7 +126,7 @@ $$
 is
 
 $$
-\mathsf N^{*}(M)
+\mathsf N^{\ast }(M)
 =\Theta_{a,\varepsilon,H,\delta,k}(M^{1-1/k})
 \qquad(M\to\infty).
 $$
@@ -170,7 +170,7 @@ Minimizing the estimated envelope surrogate loses at most $`\Gamma_k(a)`$ plus s
 
 If the source can deliberately prepare $`k`$ independent copies at a sampled context, the learner obtains effective groups directly. For fixed tolerance above $`\Gamma_k(a)`$, the number of groups can be independent of $`M`$. Every initial and repeated specimen is still charged. This capability is independent preparation from the source, not cloning a received unknown state.
 
-Random replica depth is another interface choice. With $`K\sim\mathrm{Poisson}(a)`$, the loss-bit product has mean $`e^{a(\ell_h(x)-1)}`$. The identity is inherited Bernoulli-factory machinery. If a natural arrival always prepares an initial specimen, the physical count is $`\max\{1,K\}`$, with mean $`a+e^{-a}`$, rather than $`a`$. A finite expected count with an unbounded tail is different from a deterministic cap.
+Random replica depth is another interface choice. With $`K\sim\mathrm{Poisson}(a)`$, the loss-bit product has mean $`e^{a(\ell_h(x)-1)}`$. The identity is inherited Bernoulli-factory machinery. If a natural arrival always prepares an initial specimen, the physical count is $`\max\lbrace 1,K\rbrace `$, with mean $`a+e^{-a}`$, rather than $`a`$. A finite expected count with an unbounded tail is different from a deterministic cap.
 
 The [resource account](../science/replay_and_resources.md) also charges discarded passive arrivals, classical caches, measurement circuits and any quantum waiting memory.
 

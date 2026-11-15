@@ -17,7 +17,7 @@ $$
 where $`a>0`$. A proper learner returns an index $`\widehat h`$ in the supplied class. Its guarantee is
 
 $$
-\Pr\!\left[R_a(\widehat h)-\min_h R_a(h)\le\varepsilon\right]
+\Pr\left[R_a(\widehat h)-\min_h R_a(h)\le\varepsilon\right]
 \ge 1-\delta
 $$
 
@@ -27,7 +27,7 @@ For $`r\ge0`$, let
 
 $$
 K_r(a)=\sup_{\mu,\nu}
-\frac{\int_0^1e^{au}\,d\mu(u)}{\int_0^1e^{au}\,d\nu(u)},
+\frac{\int_0^1e^{au}\thinspace d\mu(u)}{\int_0^1e^{au}\thinspace d\nu(u)},
 \qquad
 \Gamma_r(a)=\frac1a\log K_r(a),
 $$
@@ -49,8 +49,8 @@ $$
 then the worst-case fixed-budget passive sample complexity, over classes of size at most $`H`$ and fixed source tables, satisfies
 
 $$
-N^{*}(M)=\Theta_{a,\varepsilon,H,\delta,k}
-\!\left(M^{1-1/k}\right)
+N^{\ast }(M)=\Theta_{a,\varepsilon,H,\delta,k}
+\left(M^{1-1/k}\right)
 \qquad(M\to\infty).
 $$
 
@@ -63,8 +63,8 @@ The upper bound holds for every such finite class. The lower bound is witnessed 
 First suppose $`k\ge2`$, and put $`r=k-1`$. Because $`\varepsilon\lt \Gamma_r(a)`$, choose moment-matched probability measures $`\mu,\nu`$ such that
 
 $$
-u=\int e^{ap}\,d\mu(p),\qquad
-v=\int e^{ap}\,d\nu(p),\qquad
+u=\int e^{ap}\thinspace d\mu(p),\qquad
+v=\int e^{ap}\thinspace d\nu(p),\qquad
 g=\frac1a\log\frac vu>\varepsilon.
 $$
 
@@ -114,7 +114,7 @@ $$
 If $`\omega_0,\omega_1`$ are the prior-averaged classical-quantum training states, their trace distance obeys
 
 $$
-\frac12\|\omega_0-\omega_1\|_1\le q_n.
+\frac12\Vert \omega_0-\omega_1\Vert _1\le q_n.
 $$
 
 Indeed their contributions on $`E`$ are equal, and the remaining subnormalized states each have trace $`q_n`$. With equal world priors, no procedure can identify the world with average probability greater than $`(1+q_n)/2`$.
@@ -130,15 +130,15 @@ $$
 Both coordinate exponential moments are averages of $`M`$ independent random variables in $`[1,e^a]`$. Hoeffding's inequality and a union bound show that, in either world, with probability at least $`1-\eta_M`$,
 
 $$
-\left|\frac1M\sum_xe^{ap_x}-\mathbb E e^{ap_x}\right|\le\zeta,
+\left\lvert\frac1M\sum_xe^{ap_x}-\mathbb E e^{ap_x}\right\rvert\le\zeta,
 \qquad
-\left|\frac1M\sum_xe^{aq_x}-\mathbb E e^{aq_x}\right|\le\zeta,
+\left\lvert\frac1M\sum_xe^{aq_x}-\mathbb E e^{aq_x}\right\rvert\le\zeta,
 $$
 
 where
 
 $$
-\eta_M=4\exp\!\left(-\frac{2M\zeta^2}{(e^a-1)^2}\right).
+\eta_M=4\exp\left(-\frac{2M\zeta^2}{(e^a-1)^2}\right).
 $$
 
 All exponential moments are at least one, so $`\log`$ is 1-Lipschitz on their range. On this good-table event the two actual risks differ, in the intended direction, by at least
@@ -153,13 +153,13 @@ Thus, on every good table, an $`(\varepsilon,\delta)`$-PAC proper learner must s
 For explicit constants put $`w=1-2\delta>0`$. Take $`M`$ large enough that $`\eta_M\le w/8`$, and take
 
 $$
-n\le c\,M^{1-1/k},\qquad
+n\le c\thinspace M^{1-1/k},\qquad
 c=\left(\frac{wk!}{4}\right)^{1/k}.
 $$
 
 Then $`q_n\le w/4`$. The learning guarantee would give world-identification success at least $`1/2+3w/8`$, whereas the trace-distance bound permits at most $`1/2+w/8`$. This contradiction proves the lower bound. In particular, some deterministic fixed table violates the proposed learning guarantee; a random-table prior is not being substituted for the original task.
 
-When $`k=1`$, the asserted exponent is zero. Since $`\varepsilon\lt \Gamma_0(a)=1`$, two deterministic tables with opposite optimal hypotheses and risk gap one rule out a zero-sample learner at $`\delta\lt 1/2`$. Hence $`N^{*}(M)\ge1=\Omega(M^0)`$. The preceding collision argument is unnecessary in this case.
+When $`k=1`$, the asserted exponent is zero. Since $`\varepsilon\lt \Gamma_0(a)=1`$, two deterministic tables with opposite optimal hypotheses and risk gap one rule out a zero-sample learner at $`\delta\lt 1/2`$. Hence $`N^{\ast }(M)\ge1=\Omega(M^0)`$. The preceding collision argument is unnecessary in this case.
 
 ## Upper bound from uniformly selected collision groups
 
@@ -179,7 +179,7 @@ $$
 \mathbb EC={b_M\choose k}M^{1-k}\longrightarrow\lambda_k=\frac1{k!}.
 $$
 
-In $`\mathbb EC^2`$, disjoint pairs of subsets contribute asymptotically $`\lambda_k^2`$, identical subsets contribute $`\lambda_k`$, and pairs overlapping in $`j\in\{1,\ldots,k-1\}`$ positions contribute
+In $`\mathbb EC^2`$, disjoint pairs of subsets contribute asymptotically $`\lambda_k^2`$, identical subsets contribute $`\lambda_k`$, and pairs overlapping in $`j\in\lbrace 1,\ldots,k-1\rbrace `$ positions contribute
 
 $$
 {b_M\choose k}{k\choose j}{b_M-k\choose k-j}
@@ -215,7 +215,7 @@ e^{au}\le P(u)=\sum_{j=0}^k c_j u^j
 \le K_k(a)e^{au}.
 $$
 
-Fix hypothesis $`h`$ for a batch. Upon receiving $`(x,\rho_x)`$, measure the loss projector $`I-\Pi_h(x)`$, producing $`Y\in\{0,1\}`$ with mean $`\ell_h(x)`$. For a selected collision group define
+Fix hypothesis $`h`$ for a batch. Upon receiving $`(x,\rho_x)`$, measure the loss projector $`I-\Pi_h(x)`$, producing $`Y\in\lbrace 0,1\rbrace `$ with mean $`\ell_h(x)`$. For a selected collision group define
 
 $$
 Z_h=\sum_{j=0}^k c_j\prod_{i=1}^jY_i,
@@ -235,7 +235,7 @@ Equivalently, on $`k`$ quantum copies one may use the Hermitian observable
 $$
 O_h(x)=\sum_{j=0}^k c_j
 \bigl(I-\Pi_h(x)\bigr)^{\otimes j}\otimes I^{\otimes(k-j)},
-\qquad \|O_h(x)\|\le A_P.
+\qquad \Vert O_h(x)\Vert \le A_P.
 $$
 
 If a binary effect is needed by another learning primitive, $`(O_h+A_PI)/(2A_P)`$ lies between zero and identity and admits a standard projector dilation. This shift and rescaling, including its effect on accuracy and gate costs, must be retained.
@@ -273,18 +273,18 @@ N\le H B b_M
 =O_{a,\varepsilon,H,\delta,k}(M^{1-1/k}).
 $$
 
-Choose $`\widehat h`$ minimizing $`\widehat S_h`$, and let $`h_{*}`$ minimize the true tilted risk. On the simultaneous good event,
+Choose $`\widehat h`$ minimizing $`\widehat S_h`$, and let $`h_{\ast }`$ minimize the true tilted risk. On the simultaneous good event,
 
 $$
 A_{\widehat h}\le S_{\widehat h}
-\le S_{h_{*}}+2\eta
-\le K_k(a)A_{h_{*}}+2\eta.
+\le S_{h_{\ast }}+2\eta
+\le K_k(a)A_{h_{\ast }}+2\eta.
 $$
 
-Since $`A_{h_{*}}\ge1`$,
+Since $`A_{h_{\ast }}\ge1`$,
 
 $$
-R_a(\widehat h)-R_a(h_{*})
+R_a(\widehat h)-R_a(h_{\ast })
 \le\frac1a\log\bigl(K_k(a)+2\eta\bigr)
 <\varepsilon.
 $$

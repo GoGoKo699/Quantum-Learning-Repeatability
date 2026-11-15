@@ -42,7 +42,7 @@ lies in the convex hull of the curve $`(u,\ldots,u^r,f_a(u))\in\mathbb R^{r+1}`$
 
 $$
 \kappa_r(a)=
-\min\left\lbraceK:\ \exists p\in\mathbb R[u],\ \deg p\leq r,
+\min\left\lbrace K:\ \exists p\in\mathbb R[u],\ \deg p\leq r,
 \quad f_a(u)\leq p(u)\leq Kf_a(u)\quad(0\leq u\leq1)\right\rbrace.
 $$
 
@@ -107,7 +107,7 @@ Define the best relative approximation error
 
 $$
 E_r(a)=\min_{\deg q\leq r}\max_{0\leq u\leq1}
-\left\lvertq(u)e^{-au}-1\right\rvert.
+\left\lvert q(u)e^{-au}-1\right\rvert.
 $$
 
 The minimum exists by the same coefficient-compactness argument as above, and $`E_r(a)\lt 1`$: a suitable positive constant already gives error $`\tanh(a/2)\lt 1`$. Scaling an envelope to balance its upper and lower relative errors, and conversely scaling a relative approximant upward, gives

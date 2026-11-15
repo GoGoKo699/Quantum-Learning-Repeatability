@@ -90,7 +90,7 @@ $$
 Thus $`\Gamma_r(a)`$ is the largest possible tilted-risk gap that remains compatible with those moments. An inherited approximation duality gives an equivalent envelope:
 
 $$
-\kappa_r(a)=\min\left\lbraceK:\ \exists P,\ \deg P\le r,\quad
+\kappa_r(a)=\min\left\lbrace K:\ \exists P,\ \deg P\le r,\quad
 e^{au}\le P(u)\le K e^{au}\quad(0\le u\le1)\right\rbrace.
 $$
 

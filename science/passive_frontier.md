@@ -35,7 +35,7 @@ $$
 where $`\mu,\nu`$ are probability measures with equal moments of degrees $`0,\ldots,r`$. Thus $`K_r(a)`$ is the same constant denoted $`\kappa_r(a)`$ in the moment account. The moment-frontier theorem gives the equivalent attained envelope problem
 
 $$
-K_r(a)=\min\left\lbraceK:
+K_r(a)=\min\left\lbrace K:
 \exists P\in\mathbb R[u],\ \deg P\le r,\quad
 e^{au}\le P(u)\le K e^{au}\quad(0\le u\le1)\right\rbrace.
 $$

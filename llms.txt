@@ -1,0 +1,20 @@
+# Quantum Learning Repeatability
+
+Question: how does the accuracy of a nonlinear quantum loss determine passive sample complexity when contexts cannot be replayed?
+
+Authoritative routes:
+- Task, fixed table, uniform context law, proper finite-class selection: science/model.md
+- Exact Gamma thresholds and relative polynomial-envelope duality: science/moment_frontier.md
+- Strict-gap fixed-parameter Theta(M^(1-1/k)) theorem and complete lower/upper proofs: science/passive_frontier.md
+- Selected-input replay, source copies, classical cache, optional quantum storage and hypothesis circuits: science/replay_and_resources.md
+- Meaning, examples and unresolved parameter boundaries: science/interpretation.md
+- Inherited tools and closest scientific comparisons: references/related_work.md
+- Reproduction and finite-check limits: verification/README.md
+
+Essential distinctions:
+- One copy per passive arrival does not forbid natural recurrence of the same context.
+- The theorem is worst-case proper finite-class learning; not every hypothesis class is hard.
+- All non-support parameters are fixed and the accuracy lies strictly between exact adjacent Gamma thresholds.
+- The quantum lower bound allows arbitrary collective processing; matching fixed-class exponents also admit immediate single-copy measurements and classical caching.
+- No quantum processing speedup, critical-threshold rate, nonuniform-context law or free state-preparation oracle is asserted.
+- Scientific proofs and numerical checks have different roles.

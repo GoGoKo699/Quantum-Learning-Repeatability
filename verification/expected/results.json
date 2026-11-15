@@ -1,0 +1,13 @@
+{
+  "gamma": {
+    "a=1,r=0": 1.0,
+    "a=1,r=1": 0.12330156148224437,
+    "a=1,r=2": 0.010295312341599793,
+    "a=1,r=3": 0.0006445621361969091,
+    "a=2,r=0": 1.0,
+    "a=2,r=1": 0.23723732353526342,
+    "a=2,r=2": 0.039761060548886444,
+    "a=2,r=3": 0.005003925479721826
+  },
+  "scope": "Finite floating-point moment/envelope and diagonal quantum-source checks at a=1,2 and r=0,1,2,3, plus exact integer occupancy counting before conversion to floating probabilities. These checks do not prove the general theorems, certify novelty, or establish a quantum computational advantage."
+}

@@ -38,22 +38,22 @@ The dependencies are pinned to the versions used for the recorded run. The scrip
 The source checks use
 
 $$
-\rho(p,q)=\operatorname{diag}(1-p,p)\otimes
-\operatorname{diag}(1-q,q).
+\rho(p,q)=\mathrm{diag}(1-p,p)\otimes
+\mathrm{diag}(1-q,q).
 $$
 
-One world draws the frozen coordinates independently from $\mu,\nu$; the other swaps these priors. Each averaged state is diagonal, so half the $\ell_1$ distance of its diagonal is its quantum half trace distance. This verifies an actual quantum input family, while keeping the finite calculation small. It does not restrict the learner's processing to measurements in that diagonal basis.
+One world draws the frozen coordinates independently from $`\mu,\nu`$; the other swaps these priors. Each averaged state is diagonal, so half the $`\ell_1`$ distance of its diagonal is its quantum half trace distance. This verifies an actual quantum input family, while keeping the finite calculation small. It does not restrict the learner's processing to measurements in that diagonal basis.
 
 ## Recorded thresholds
 
-$\Gamma_r(a)$ is the logarithmic moment ambiguity divided by $a$.
+$`\Gamma_r(a)`$ is the logarithmic moment ambiguity divided by $`a`$.
 
 | (a) | (Gamma_0) | (Gamma_1) | (Gamma_2) | (Gamma_3) |
 |---:|---:|---:|---:|---:|
 | 1 | 1 | 0.123301561482 | 0.010295312342 | 0.000644562136 |
 | 2 | 1 | 0.237237323535 | 0.039761060549 | 0.005003925480 |
 
-The recorded run passed all checks. Matched source-block half trace distances were below $1.3\times10^{-16}$. The refined moment and continuum-envelope residuals were below the script's $10^{-10}$ tolerance; exact values are retained in the result file. The collision calculation also records finite examples at $T\approx M^{1-1/k}$, alongside the fixed-(k) Poisson limit. Those examples illustrate the scaling and are not used to certify an asymptotic theorem.
+The recorded run passed all checks. Matched source-block half trace distances were below $`1.3\times10^{-16}`$. The refined moment and continuum-envelope residuals were below the script's $`10^{-10}`$ tolerance; exact values are retained in the result file. The collision calculation also records finite examples at $`T\approx M^{1-1/k}`$, alongside the fixed-(k) Poisson limit. Those examples illustrate the scaling and are not used to certify an asymptotic theorem.
 
 ## Limits
 

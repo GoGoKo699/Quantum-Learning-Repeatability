@@ -23,31 +23,31 @@ Watrous uses matrix notation rather than Dirac notation. The project uses both.
 
 | Book notation | Project notation or role |
 | --- | --- |
-| A complex Euclidean space such as $\mathcal X$ | A finite-dimensional register space, here $\mathsf Q\cong\mathbb C^d$ |
-| $\mathrm D(\mathcal X)$ | The density operators, written $\mathcal D(\mathsf Q)$ here |
-| $u u^*$ and $E_{x,x}=e_xe_x^*$ | $\lvert u\rangle\langle u\rvert$ and $\lvert x\rangle\langle x\rvert$ |
-| A measurement $\mu$ with outcome operator $\mu(1)$ | The loss outcome operator $I-\Pi_h(x)$ |
-| $\langle A,\rho\rangle=\operatorname{Tr}(A^*\rho)$ | $\operatorname{Tr}[(I-\Pi_h(x))\rho_x]=\ell_h(x)$ for the Hermitian loss projector |
-| $\lVert A\rVert_1$ | The same trace norm; our trace distance is $D(\rho,\sigma)=\tfrac12\lVert\rho-\sigma\rVert_1$ |
+| A complex Euclidean space such as $`\mathcal X`$ | A finite-dimensional register space, here $`\mathsf Q\cong\mathbb C^d`$ |
+| $`\mathrm D(\mathcal X)`$ | The density operators, written $`\mathcal D(\mathsf Q)`$ here |
+| $`u u^{*}`$ and $`E_{x,x}=e_xe_x^{*}`$ | $`\lvert u\rangle\langle u\rvert`$ and $`\lvert x\rangle\langle x\rvert`$ |
+| A measurement $`\mu`$ with outcome operator $`\mu(1)`$ | The loss outcome operator $`I-\Pi_h(x)`$ |
+| $`\langle A,\rho\rangle=\mathrm{Tr}(A^{*}\rho)`$ | $`\mathrm{Tr}[(I-\Pi_h(x))\rho_x]=\ell_h(x)`$ for the Hermitian loss projector |
+| $`\lVert A\rVert_1`$ | The same trace norm; our trace distance is $`D(\rho,\sigma)=\tfrac12\lVert\rho-\sigma\rVert_1`$ |
 
 ## From registers to the source
 
-The context is a readable classical register. A table $x\mapsto\rho_x$ defines
+The context is a readable classical register. A table $`x\mapsto\rho_x`$ defines
 
 $$
 \Omega_\rho=\frac1M\sum_{x=1}^M
 \lvert x\rangle\langle x\rvert\otimes\rho_x.
 $$
 
-Its block-diagonal form means a context label is sampled with probability $1/M$ and its associated state is supplied. The table is unknown but fixed. Receiving another example means another independent source preparation, not a coherent query to that table. Reading the context does not supply a preparation circuit or the ability to choose the next context. These are local modeling assumptions, made explicit in [the model](../science/model.md); they are not consequences of the density-operator formalism.
+Its block-diagonal form means a context label is sampled with probability $`1/M`$ and its associated state is supplied. The table is unknown but fixed. Receiving another example means another independent source preparation, not a coherent query to that table. Reading the context does not supply a preparation circuit or the ability to choose the next context. These are local modeling assumptions, made explicit in [the model](../science/model.md); they are not consequences of the density-operator formalism.
 
-Measuring $I-\Pi_h(x)$ produces a bit $Y$ with conditional mean $\ell_h(x)$. If the same context supplies $j$ independent specimens, the product of the $j$ loss bits has conditional mean $\ell_h(x)^j$. This is the first bridge from tensor-product copies to the classical moments required by the nonlinear objective.
+Measuring $`I-\Pi_h(x)`$ produces a bit $`Y`$ with conditional mean $`\ell_h(x)`$. If the same context supplies $`j`$ independent specimens, the product of the $`j`$ loss bits has conditional mean $`\ell_h(x)^j`$. This is the first bridge from tensor-product copies to the classical moments required by the nonlinear objective.
 
 ## From indistinguishable states to a learning converse
 
-The lower bound constructs two priors over fixed tables. Under either prior, consider the density operator of **all** labeled training registers. When no context occurs $k$ times, matching moments make these operators exactly equal. This statement concerns the complete quantum input, not just the outcomes of a preferred hypothesis measurement.
+The lower bound constructs two priors over fixed tables. Under either prior, consider the density operator of **all** labeled training registers. When no context occurs $`k`$ times, matching moments make these operators exactly equal. This statement concerns the complete quantum input, not just the outcomes of a preferred hypothesis measurement.
 
-If the exceptional collision event has probability $q$, the two averaged training states $\omega_0,\omega_1$ satisfy
+If the exceptional collision event has probability $`q`$, the two averaged training states $`\omega_0,\omega_1`$ satisfy
 
 $$
 D(\omega_0,\omega_1)\le q.
@@ -68,9 +68,9 @@ An entire adaptive learning computation ending in a binary hypothesis choice def
 The exponential-loss approximation problem and the generalized birthday calculation are additional **classical** machinery. The bridge is:
 
 1. Repeated loss measurements estimate moments of the conditional probability.
-2. A degree-$k$ envelope $e^{au}\le P(u)\le\kappa_k(a)e^{au}$ turns those moments into a surrogate risk with distortion $\Gamma_k(a)$.
+2. A degree-$`k`$ envelope $`e^{au}\le P(u)\le\kappa_k(a)e^{au}`$ turns those moments into a surrogate risk with distortion $`\Gamma_k(a)`$.
 3. The dual moment pair makes a larger gap invisible below the necessary repetition level.
-4. Uniform-context occupancy supplies, and limits, that repetition level at $M^{1-1/k}$ samples.
+4. Uniform-context occupancy supplies, and limits, that repetition level at $`M^{1-1/k}`$ samples.
 5. Concentration and proper hypothesis selection connect these facts to a PAC guarantee for each fixed table.
 
 The complete derivations are [the moment frontier](../science/moment_frontier.md) and [the passive frontier](../science/passive_frontier.md), corresponding to M14–M27 in [the map](milestones.md). This machinery is not attributed to Watrous.

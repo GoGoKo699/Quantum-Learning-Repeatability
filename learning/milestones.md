@@ -18,7 +18,7 @@ Each milestone records a conceptual target and its source dependencies. The map 
 
 **Dependencies and story role:** This is the local starting point; no earlier milestone is required. It introduces the object that remains fixed whenever its context is revisited.
 
-**Conceptual connection:** The table entry $\rho_x$ is a physical statistical object, not a classical list of its matrix entries given to the learner.
+**Conceptual connection:** The table entry $`\rho_x`$ is a physical statistical object, not a classical list of its matrix entries given to the learner.
 
 **Sources:** Watrous, Chapter 2, “Basic notions of quantum information,” for states; [model](../science/model.md), “Source and hypotheses.”
 
@@ -28,11 +28,11 @@ Each milestone records a conceptual target and its source dependencies. The map 
 
 **Central question:** How does a known measurement hypothesis assign a loss to an unknown state?
 
-**Understanding target:** Read $\ell_h(x)=1-\operatorname{Tr}[\Pi_h(x)\rho_x]$ as a probability in $[0,1]$. Distinguish knowledge of a hypothesis measurement from knowledge of its probability on the unknown source.
+**Understanding target:** Read $`\ell_h(x)=1-\mathrm{Tr}[\Pi_h(x)\rho_x]`$ as a probability in $`[0,1]`$. Distinguish knowledge of a hypothesis measurement from knowledge of its probability on the unknown source.
 
 **Dependencies and story role:** Uses M01 and adds the local measurement through which a hypothesis is evaluated.
 
-**Conceptual connection:** Projector-valued hypotheses make the learning task concrete without giving the learner a preparation oracle or a description of $\rho_x$.
+**Conceptual connection:** Projector-valued hypotheses make the learning task concrete without giving the learner a preparation oracle or a description of $`\rho_x`$.
 
 **Sources:** Watrous, Chapters 1–2, for operators, trace, and measurements; [model](../science/model.md), “Source and hypotheses” and “Tilted population risk.”
 
@@ -42,7 +42,7 @@ Each milestone records a conceptual target and its source dependencies. The map 
 
 **Central question:** Which information does one binary measurement outcome supply about its context?
 
-**Understanding target:** Separate the observed bit $Y$ from the conditional probability $\ell_h(x)=\mathbb E[Y\mid X=x]$. Explain why applying a nonlinear function to the bit need not estimate that function of the probability.
+**Understanding target:** Separate the observed bit $`Y`$ from the conditional probability $`\ell_h(x)=\mathbb E[Y\mid X=x]`$. Explain why applying a nonlinear function to the bit need not estimate that function of the probability.
 
 **Dependencies and story role:** Uses M02. It isolates the local statistical distinction that eventually creates the repetition cost.
 
@@ -56,7 +56,7 @@ Each milestone records a conceptual target and its source dependencies. The map 
 
 **Central question:** What changes when the source supplies several independent specimens at the same context?
 
-**Understanding target:** Interpret $\rho_x^{\otimes r}$ as repeated independent preparation. Distinguish this access from one specimen, a correlated multi-system state, or a procedure that clones an unknown received state.
+**Understanding target:** Interpret $`\rho_x^{\otimes r}`$ as repeated independent preparation. Distinguish this access from one specimen, a correlated multi-system state, or a procedure that clones an unknown received state.
 
 **Dependencies and story role:** Uses M01–M03. It joins the state and outcome descriptions into the local repeated-observation experiment.
 
@@ -70,7 +70,7 @@ Each milestone records a conceptual target and its source dependencies. The map 
 
 **Central question:** How are random context labels and their fixed conditional states combined into training data?
 
-**Understanding target:** Read the classical-quantum source $M^{-1}\sum_x|x\rangle\langle x|\otimes\rho_x$ and its independent repetitions. Explain that the table is fixed even though the sampled label changes, and that revisiting a label does not redraw its hidden table entry.
+**Understanding target:** Read the classical-quantum source $`M^{-1}\sum_x|x\rangle\langle x|\otimes\rho_x`$ and its independent repetitions. Explain that the table is fixed even though the sampled label changes, and that revisiting a label does not redraw its hidden table entry.
 
 **Dependencies and story role:** Uses M01 and M04. It moves from one context to the full source without yet specifying a learning objective.
 
@@ -98,7 +98,7 @@ Each milestone records a conceptual target and its source dependencies. The map 
 
 **Central question:** What does a positive tilt ask the learner to resolve beyond the mean loss?
 
-**Understanding target:** Interpret $R_a(h)=a^{-1}\log\mathbb E_x e^{a\ell_h(x)}$ for $a>0$, its mean-loss limit, and its emphasis on larger conditional losses. Preserve the order of the conditional mean, exponential, context average, and logarithm.
+**Understanding target:** Interpret $`R_a(h)=a^{-1}\log\mathbb E_x e^{a\ell_h(x)}`$ for $`a>0`$, its mean-loss limit, and its emphasis on larger conditional losses. Preserve the order of the conditional mean, exponential, context average, and logarithm.
 
 **Dependencies and story role:** Uses M03 and M05. It connects the local measurement probability to the global objective.
 
@@ -126,7 +126,7 @@ Each milestone records a conceptual target and its source dependencies. The map 
 
 **Central question:** Why do repeated conditional observations supply powers of a probability?
 
-**Understanding target:** Explain $\mathbb E[\prod_{i=1}^{j}Y_i\mid x]=\ell_h(x)^j$ under conditional independence, then average over contexts. Recognize the first $r$ loss moments as accessible from grouped $r$-copy examples.
+**Understanding target:** Explain $`\mathbb E[\prod_{i=1}^{j}Y_i\mid x]=\ell_h(x)^j`$ under conditional independence, then average over contexts. Recognize the first $`r`$ loss moments as accessible from grouped $`r`$-copy examples.
 
 **Dependencies and story role:** Uses M03–M04 and M07. It converts physical repetition into the scalar information used by approximation theory.
 
@@ -154,11 +154,11 @@ Each milestone records a conceptual target and its source dependencies. The map 
 
 **Central question:** How can finitely many moments control a nonlinear exponential mean?
 
-**Understanding target:** Interpret a degree-$r$ polynomial as a linear combination of the moments in M09. Understand the pointwise envelope $e^{au}\le p(u)\le K e^{au}$ as a multiplicative comparison that survives averaging.
+**Understanding target:** Interpret a degree-$`r`$ polynomial as a linear combination of the moments in M09. Understand the pointwise envelope $`e^{au}\le p(u)\le K e^{au}`$ as a multiplicative comparison that survives averaging.
 
 **Dependencies and story role:** Uses M07 and M09. It introduces the classical approximation interface that links repetition to risk accuracy.
 
-**Conceptual connection:** The envelope's positivity is a statement about its values on $[0,1]$; it does not assert that every coefficient or every associated measurement operator is positive.
+**Conceptual connection:** The envelope's positivity is a statement about its values on $`[0,1]`$; it does not assert that every coefficient or every associated measurement operator is positive.
 
 **Sources:** Watrous, Chapter 1, for linear functionals, norms, and convexity foundations; [moment frontier](../science/moment_frontier.md), “Equivalent positive polynomial envelope” and “Relative approximation, strictness, and convergence.” The project supplies the approximation argument.
 
@@ -184,7 +184,7 @@ Each milestone records a conceptual target and its source dependencies. The map 
 
 **Central question:** What does the smallest useful example reveal about nonlinear risk?
 
-**Understanding target:** Compare a hypothesis with losses $0$ and $1$ at equally likely contexts to one with constant loss $1/2$. Explain why their means agree while positive-tilt risks differ, and why the single-outcome substitution from M03 misses this distinction.
+**Understanding target:** Compare a hypothesis with losses $`0`$ and $`1`$ at equally likely contexts to one with constant loss $`1/2`$. Explain why their means agree while positive-tilt risks differ, and why the single-outcome substitution from M03 misses this distinction.
 
 **Dependencies and story role:** Uses M07, M11–M12. It begins the narrative with a concrete need for information beyond the first moment.
 
@@ -196,9 +196,9 @@ Each milestone records a conceptual target and its source dependencies. The map 
 
 **Phase:** Narrative/innovation.
 
-**Central question:** How large can a tilted-risk difference remain when the first $r$ moments agree?
+**Central question:** How large can a tilted-risk difference remain when the first $`r`$ moments agree?
 
-**Understanding target:** Interpret $\kappa_r(a)$ as the largest ratio of exponential means over matching-moment laws and $\Gamma_r(a)=a^{-1}\log\kappa_r(a)$ as the corresponding risk gap. Explain why exchanging the two laws removes a sign ambiguity.
+**Understanding target:** Interpret $`\kappa_r(a)`$ as the largest ratio of exponential means over matching-moment laws and $`\Gamma_r(a)=a^{-1}\log\kappa_r(a)`$ as the corresponding risk gap. Explain why exchanging the two laws removes a sign ambiguity.
 
 **Dependencies and story role:** Uses M09, M11 and M13. It replaces an isolated example by the exact scalar quantity that will control the theorem.
 
@@ -216,7 +216,7 @@ Each milestone records a conceptual target and its source dependencies. The map 
 
 **Dependencies and story role:** Uses M11 and M14. It makes one exact threshold serve both the lower and upper proofs.
 
-**Conceptual connection:** Matching moments erase every degree-$r$ polynomial difference, while a positive envelope bounds what remains of the exponential objective.
+**Conceptual connection:** Matching moments erase every degree-$`r`$ polynomial difference, while a positive envelope bounds what remains of the exponential objective.
 
 **Sources:** Watrous, Chapter 1, for finite-dimensional linear and convex foundations; [moment frontier](../science/moment_frontier.md), Theorem 1 and its explicit attribution; [related work](../references/related_work.md), “Classical conditional learning and approximation theory.”
 
@@ -226,7 +226,7 @@ Each milestone records a conceptual target and its source dependencies. The map 
 
 **Central question:** What accuracy can first-moment information support at a fixed tilt?
 
-**Understanding target:** Explain the extremal constant-loss and endpoint-Bernoulli laws at a common mean, the maximizing mean, and the explicit value of $\Gamma_1(a)$. Recognize its logarithmic Specht-ratio origin and its leading behavior $a/8$.
+**Understanding target:** Explain the extremal constant-loss and endpoint-Bernoulli laws at a common mean, the maximizing mean, and the explicit value of $`\Gamma_1(a)`$. Recognize its logarithmic Specht-ratio origin and its leading behavior $`a/8`$.
 
 **Dependencies and story role:** Uses M13–M15. It turns the abstract frontier into a concrete scale for the first change in passive sample behavior.
 
@@ -240,7 +240,7 @@ Each milestone records a conceptual target and its source dependencies. The map 
 
 **Central question:** How do successive repetition levels change the threshold sequence?
 
-**Understanding target:** Explain positivity, strict decrease, and convergence of $\Gamma_r(a)$, and the role of relative approximation in those properties. Interpret the fixed-degree small-tilt asymptotic while keeping that limit separate from the fixed-parameter support-size limit.
+**Understanding target:** Explain positivity, strict decrease, and convergence of $`\Gamma_r(a)`$, and the role of relative approximation in those properties. Interpret the fixed-degree small-tilt asymptotic while keeping that limit separate from the fixed-parameter support-size limit.
 
 **Dependencies and story role:** Uses M14–M16. It establishes that adjacent accuracy intervals form a genuine ordered hierarchy.
 
@@ -268,7 +268,7 @@ Each milestone records a conceptual target and its source dependencies. The map 
 
 **Central question:** How does minimizing a surrogate yield the required proper-risk decision?
 
-**Understanding target:** Follow the chain comparing the selected exponential mean, its polynomial mean, and the optimal hypothesis's polynomial mean. Explain why the distortion enters once as $\Gamma_r(a)$, with a separate estimation slack, rather than twice.
+**Understanding target:** Follow the chain comparing the selected exponential mean, its polynomial mean, and the optimal hypothesis's polynomial mean. Explain why the distortion enters once as $`\Gamma_r(a)`$, with a separate estimation slack, rather than twice.
 
 **Dependencies and story role:** Uses M08, M15 and M18. It connects local estimation to the actual learning output.
 
@@ -296,7 +296,7 @@ Each milestone records a conceptual target and its source dependencies. The map 
 
 **Central question:** Why can no collective quantum measurement distinguish the two worlds before sufficient repetitions occur?
 
-**Understanding target:** Explain why entries of an $s$-copy conditional state are degree-$s$ polynomials in its latent probability. Use the matching moments and independence between frozen context entries to obtain equality of the complete prior-averaged training states when every occupancy is small enough.
+**Understanding target:** Explain why entries of an $`s`$-copy conditional state are degree-$`s`$ polynomials in its latent probability. Use the matching moments and independence between frozen context entries to obtain equality of the complete prior-averaged training states when every occupancy is small enough.
 
 **Dependencies and story role:** Uses M04, M10 and M20. It provides the measurement-independent core of the lower bound.
 
@@ -310,7 +310,7 @@ Each milestone records a conceptual target and its source dependencies. The map 
 
 **Central question:** At what sample scale can a context first occur often enough to expose the hidden distinction?
 
-**Understanding target:** Interpret the bound $\Pr(\text{a k-fold repeat})\leq\binom nk M^{1-k}$ for $k\geq2$. Derive the scale $M^{1-1/k}$ and explain how a rare bad-label event bounds distinguishing advantage.
+**Understanding target:** Interpret the bound $`\Pr(\text{a k-fold repeat})\leq\binom nk M^{1-k}`$ for $`k\geq2`$. Derive the scale $`M^{1-1/k}`$ and explain how a rare bad-label event bounds distinguishing advantage.
 
 **Dependencies and story role:** Uses M05, M10 and M21. It turns full-state equality into a support-dependent information bound.
 
@@ -324,7 +324,7 @@ Each milestone records a conceptual target and its source dependencies. The map 
 
 **Central question:** Why does the argument establish a failure for a fixed unknown source, rather than a different resampling model?
 
-**Understanding target:** Combine concentration of the table's exponential means, a strict risk gap above $\epsilon$, and the world-identification bound. Explain how averaging a purported guarantee over table priors leads to a contradiction and therefore to a violating deterministic table.
+**Understanding target:** Combine concentration of the table's exponential means, a strict risk gap above $`\epsilon`$, and the world-identification bound. Explain how averaging a purported guarantee over table priors leads to a contradiction and therefore to a violating deterministic table.
 
 **Dependencies and story role:** Uses M08 and M20–M22. It closes the lower proof under the original task's quantifiers.
 
@@ -338,7 +338,7 @@ Each milestone records a conceptual target and its source dependencies. The map 
 
 **Central question:** Is the lower collision scale also enough to obtain a useful repeated context?
 
-**Understanding target:** Follow the first- and second-moment calculation for the number of equal-label $k$-subsets in a batch of order $M^{1-1/k}$. Explain why overlap terms vanish at fixed $k$ and why the chance of success stays bounded away from zero.
+**Understanding target:** Follow the first- and second-moment calculation for the number of equal-label $`k`$-subsets in a batch of order $`M^{1-1/k}`$. Explain why overlap terms vanish at fixed $`k`$ and why the chance of success stays bounded away from zero.
 
 **Dependencies and story role:** Uses M22. It begins the constructive half at the same support exponent as the converse.
 
@@ -370,7 +370,7 @@ Each milestone records a conceptual target and its source dependencies. The map 
 
 **Dependencies and story role:** Uses M18–M19 and M24–M25. It completes the upper construction as a fixed-budget learning algorithm rather than an expected waiting-time argument.
 
-**Conceptual connection:** The theorem's constant may depend on the tilt, class cap, confidence, degree, and threshold margin even though its power of $M$ is sharp.
+**Conceptual connection:** The theorem's constant may depend on the tilt, class cap, confidence, degree, and threshold margin even though its power of $`M`$ is sharp.
 
 **Sources:** Watrous, Chapter 1, for probability notation; [passive frontier](../science/passive_frontier.md), “Finite estimates and a fixed sample budget,” for bounded-variable concentration and confidence bookkeeping; [replay and resources](../science/replay_and_resources.md), “Physical and computational resources.”
 
@@ -380,7 +380,7 @@ Each milestone records a conceptual target and its source dependencies. The map 
 
 **Central question:** How do the exact thresholds and the collision scale combine into one theorem?
 
-**Understanding target:** Explain why $\Gamma_k(a)<\epsilon<\Gamma_{k-1}(a)$ gives worst-case sample complexity $\Theta(M^{1-1/k})$. State the fixed-parameter limiting order, the confidence and proper-selection conditions, and the distinction between an upper bound for every finite class and a lower bound witnessed by one two-hypothesis class.
+**Understanding target:** Explain why $`\Gamma_k(a)\lt \epsilon\lt \Gamma_{k-1}(a)`$ gives worst-case sample complexity $`\Theta(M^{1-1/k})`$. State the fixed-parameter limiting order, the confidence and proper-selection conditions, and the distinction between an upper bound for every finite class and a lower bound witnessed by one two-hypothesis class.
 
 **Dependencies and story role:** Integrates M14–M26. It is the global synthesis of the main scientific proof.
 
@@ -392,9 +392,9 @@ Each milestone records a conceptual target and its source dependencies. The map 
 
 **Phase:** Narrative/innovation.
 
-**Central question:** What remains ambiguous when each random arrival already supplies $r$ copies?
+**Central question:** What remains ambiguous when each random arrival already supplies $`r`$ copies?
 
-**Understanding target:** Explain the support-independent PAC boundary at $\Gamma_r(a)$, why later natural visits prevent it from being an eternal impossibility for a fixed finite support, and why the worst-case expected-regret factor $1-1/H$ describes a different guarantee.
+**Understanding target:** Explain the support-independent PAC boundary at $`\Gamma_r(a)`$, why later natural visits prevent it from being an eternal impossibility for a fixed finite support, and why the worst-case expected-regret factor $`1-1/H`$ describes a different guarantee.
 
 **Dependencies and story role:** Uses M06, M08, M15, M19 and M23. It places the passive staircase inside the broader access comparison without changing the output metric silently.
 
@@ -408,7 +408,7 @@ Each milestone records a conceptual target and its source dependencies. The map 
 
 **Central question:** What does deliberate repetition remove, and which preparation costs remain?
 
-**Understanding target:** Explain how replay bypasses collision waiting, how the Poisson product identity estimates the exponential with random depth, and why a finite expected count differs from a hard copy cap. Account for the initial specimen even when the random depth is zero, giving expected preparations $a+e^{-a}$ under the stated natural-event interface.
+**Understanding target:** Explain how replay bypasses collision waiting, how the Poisson product identity estimates the exponential with random depth, and why a finite expected count differs from a hard copy cap. Account for the initial specimen even when the random depth is zero, giving expected preparations $`a+e^{-a}`$ under the stated natural-event interface.
 
 **Dependencies and story role:** Uses M04, M06, M09 and M28. It completes the source-access comparison with its physical preparation obligations.
 

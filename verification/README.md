@@ -2,7 +2,13 @@
 
 The verifier checks the numerical threshold values and finite mechanisms used by the repeatability account. It compares independently specified moment and polynomial optimization problems, constructs explicit matching-moment source states, verifies the copy observable, and counts context collisions. The analytic statements and their quantifiers remain in the scientific account.
 
-## Run
+## Hosted mathematics
+
+The pull-request workflow compares the exact proposed Markdown with its actual GitHub rendering at widths 1440 and 760. It runs only for same-repository pull requests with `contents: read`, no persisted checkout credential and no secret inputs. The source-bound structural report, HTML and screenshots are retained for visual inspection. A passing structural comparison does not replace proof review or visual inspection. Artifacts have a limited retention period.
+
+The collector and source comparator are in `hosted_math/`. The workflow first probes one representative proof page, then checks every tracked Markdown page. Its artifact name identifies the exact proposed source commit.
+
+## Run the finite checks
 
 From the repository root, using Python 3.12:
 

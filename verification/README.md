@@ -25,15 +25,15 @@ The dependencies are pinned to the versions used for the recorded run. The scrip
 
 | Check | Computation | Scope |
 |---|---|---|
-| Moment/envelope duality | Independently solve the normalized ratio primal and polynomial-envelope dual on 4,001 points, for eight cases | (a=1,2), degrees (r=0,1,2,3); numerical agreement on the grid |
-| Continuum envelope | Refine alternating contacts and inspect every real stationary point of (P(p)e^{-ap}), plus both endpoints | The eight displayed numerical cases; floating-point root calculations |
-| Matching moment witnesses | Solve for positive atomic weights, compare moments through degree (r), and evaluate the tilted risk ratio | Explicit finite priors, independently checked against each envelope |
-| First threshold | Compare the degree-one value with the analytic Specht expression | (a=1,2) |
-| Quantum source blocks | Construct the full diagonal of each averaged two-qubit state for repeated contexts | Twenty blocks: repetitions through (r) agree; the next repetition distinguishes the selected witness |
-| Several contexts | Tensor three independently assigned context blocks using explicit arrival words | Six words whose maximum multiplicity is at most (r); registers may be regrouped by a common permutation |
-| Copy observable | Evaluate the falling-factorial estimator from the count of (r) independent Bernoulli outcomes | Eight envelope polynomials, tested on 101 loss probabilities each |
+| Moment/envelope duality | Independently solve the normalized ratio primal and polynomial-envelope dual on 4,001 points, for eight cases | $`a=1,2`$, degrees $`r=0,1,2,3`$; numerical agreement on the grid |
+| Continuum envelope | Refine alternating contacts and inspect every real stationary point of $`P(p)e^{-ap}`$, plus both endpoints | The eight displayed numerical cases; floating-point root calculations |
+| Matching moment witnesses | Solve for positive atomic weights, compare moments through degree $`r`$, and evaluate the tilted risk ratio | Explicit finite priors, independently checked against each envelope |
+| First threshold | Compare the degree-one value with the analytic Specht expression | $`a=1,2`$ |
+| Quantum source blocks | Construct the full diagonal of each averaged two-qubit state for repeated contexts | Twenty blocks: repetitions through $`r`$ agree; the next repetition distinguishes the selected witness |
+| Several contexts | Tensor three independently assigned context blocks using explicit arrival words | Six words whose maximum multiplicity is at most $`r`$; registers may be regrouped by a common permutation |
+| Copy observable | Evaluate the falling-factorial estimator from the count of $`r`$ independent Bernoulli outcomes | Eight envelope polynomials, tested on 101 loss probabilities each |
 | Collision law | Count assignments exactly with integer dynamic programming before converting to probabilities | 126 finite cases, the union bound, monotonicity and the pigeonhole endpoint |
-| Independent occupancy check | Enumerate every context word for small supports and compare with the dynamic program; also compare (k=2) with the ordinary birthday formula | 42 exhaustive cases, plus the two-fold collision cases above |
+| Independent occupancy check | Enumerate every context word for small supports and compare with the dynamic program; also compare $`k=2`$ with the ordinary birthday formula | 42 exhaustive cases, plus the two-fold collision cases above |
 
 The source checks use
 
@@ -48,12 +48,12 @@ One world draws the frozen coordinates independently from $`\mu,\nu`$; the other
 
 $`\Gamma_r(a)`$ is the logarithmic moment ambiguity divided by $`a`$.
 
-| (a) | (Gamma_0) | (Gamma_1) | (Gamma_2) | (Gamma_3) |
+| $`a`$ | $`\Gamma_0`$ | $`\Gamma_1`$ | $`\Gamma_2`$ | $`\Gamma_3`$ |
 |---:|---:|---:|---:|---:|
 | 1 | 1 | 0.123301561482 | 0.010295312342 | 0.000644562136 |
 | 2 | 1 | 0.237237323535 | 0.039761060549 | 0.005003925480 |
 
-The recorded run passed all checks. Matched source-block half trace distances were below $`1.3\times10^{-16}`$. The refined moment and continuum-envelope residuals were below the script's $`10^{-10}`$ tolerance; exact values are retained in the result file. The collision calculation also records finite examples at $`T\approx M^{1-1/k}`$, alongside the fixed-(k) Poisson limit. Those examples illustrate the scaling and are not used to certify an asymptotic theorem.
+The recorded run passed all checks. Matched source-block half trace distances were below $`1.3\times10^{-16}`$. The refined moment and continuum-envelope residuals were below the script's $`10^{-10}`$ tolerance; exact values are retained in the result file. The collision calculation also records finite examples at $`T\approx M^{1-1/k}`$, alongside the fixed-$`k`$ Poisson limit. Those examples illustrate the scaling and are not used to certify an asymptotic theorem.
 
 ## Limits
 

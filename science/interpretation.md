@@ -62,7 +62,7 @@ At tolerances above this threshold, first-moment information is enough for prope
 
 ## Replay changes source access
 
-Chosen-input replay supplies fresh preparations of the same conditional state. It permits direct construction of the repeated-context observations without waiting for passive collisions, removing the support-size dependence for fixed parameters. It does not manufacture copies of an unknown received state. A hard cap of $`r`$ preparations per context and an unbounded random count with finite expectation are also different resources; [replay and resources](replay_and_resources.md) keeps them separate.
+Chosen-input replay supplies fresh preparations of the same conditional state. It permits direct construction of the repeated-context observations without waiting for passive collisions, removing the support-size dependence for fixed parameters. It does not manufacture copies of an unknown received state. A hard cap of $`r`$ preparations per source event and an unbounded random count with finite expectation are also different resources; [replay and resources](replay_and_resources.md) keeps them separate.
 
 Uniform contexts play a substantive role in the passive upper bound. A context-label-symmetric collision rule selects an exactly uniform repeated context. Independent batches therefore yield independent effective examples for every fixed state table. For a nonuniform law, ordinary collision selection reweights a context according to a higher power of its probability, so this argument does not transfer unchanged.
 

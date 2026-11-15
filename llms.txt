@@ -10,6 +10,7 @@ Authoritative routes:
 - Meaning, examples and unresolved parameter boundaries: science/interpretation.md
 - Inherited tools and closest scientific comparisons: references/related_work.md
 - Reproduction and finite-check limits: verification/README.md
+- Concrete story, selected Watrous (2018) bridge and common 30-milestone map: learning/README.md
 
 Essential distinctions:
 - One copy per passive arrival does not forbid natural recurrence of the same context.
